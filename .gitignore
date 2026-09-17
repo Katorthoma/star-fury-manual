@@ -1,0 +1,18 @@
+# Python / virtual environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Zensical generated output/cache
+site/
+.cache/
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# Editor / temporary files
+*.swp
+*.swo
+*~

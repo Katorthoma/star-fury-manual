@@ -1,0 +1,119 @@
+[project]
+site_name = "Star Fury V5 Player Manual"
+site_url = "https://katorthoma.github.io/star-fury-manual/"
+site_description = "Unofficial community documentation for Star Fury V5, covering mechanics, strategy, and reference material."
+site_author = "Zathman"
+repo_url = "https://github.com/Katorthoma/star-fury-manual"
+repo_name = "Katorthoma/star-fury-manual"
+edit_uri = "edit/main/docs/"
+copyright = "Unofficial community documentation for Star Fury V5"
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = ["javascripts/sticky-tables.js"]
+
+nav = [
+  { "Home" = "index.md" },
+  { "Getting started" = [
+      "getting-started/index.md",
+      { "New-player opening" = "strategy/opening.md" },
+      { "Common mistakes" = "strategy/common-mistakes.md" },
+    ] },
+  { "Empire" = [
+      { "Resources and economy" = "empire/resources.md" },
+      { "Buildings and production" = "empire/buildings.md" },
+      { "Research" = "empire/research.md" },
+      { "Rewards and preferences" = "strategy/rewards-preferences.md" },
+    ] },
+  { "Ships" = [
+      "ships/index.md",
+      { "Exploration" = "expansion/exploration.md" },
+      { "Defence" = "expansion/defence.md" },
+    ] },
+  { "Intelligence" = "intelligence/index.md" },
+  { "Raids" = "raids/index.md" },
+  { "Boss battles" = "boss-battles/index.md" },
+  { "Combat" = "combat/index.md" },
+  { "Alliance" = [
+      "alliance/index.md",
+      { "Alliance Station" = "alliance/station.md" },
+    ] },
+  { "Strategy" = [
+      { "Newbie protection and war timing" = "strategy/war-timing.md" },
+      { "Defeat, respawn, and second empires" = "strategy/respawn-second-empires.md" },
+      { "Decision tools" = "strategy/decision-tools.md" },
+    ] },
+  { "Reference" = [
+      { "Interface map" = "reference/interface.md" },
+      { "Status and colors" = "reference/status-colors.md" },
+      { "Quick combat reference" = "reference/combat-quick-reference.md" },
+      { "Pre-war checklist" = "reference/pre-war-checklist.md" },
+      { "Race reference" = "reference/races.md" },
+      { "Raid reference" = "reference/raids.md" },
+      { "Known unknowns" = "reference/known-unknowns.md" },
+      { "Glossary" = "reference/glossary.md" },
+      { "Evidence and accuracy" = "about/evidence.md" },
+    ] },
+]
+
+[project.theme]
+custom_dir = "overrides"
+favicon = "assets/icons/favicon-32.png"
+variant = "modern"
+language = "en"
+features = [
+  "navigation.instant",
+  "navigation.instant.progress",
+  "navigation.tracking",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.sections",
+  "navigation.indexes",
+  "navigation.path",
+  "navigation.top",
+  "navigation.footer",
+  "toc.follow",
+  "search.highlight",
+  "content.action.edit",
+  "content.action.view",
+  "content.code.copy",
+  "content.tooltips",
+]
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+
+[[project.theme.palette]]
+primary = "light blue"
+accent = "cyan"
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+primary = "light blue"
+accent = "cyan"
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+primary = "light blue"
+accent = "cyan"
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[project.markdown_extensions]
+admonition = {}
+attr_list = {}
+md_in_html = {}
+tables = {}
+pymdownx.details = {}
+pymdownx.superfences = {}
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tabbed.alternate_style = true
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+toc.permalink = true
+toc.toc_depth = 2

@@ -11,7 +11,7 @@ The site is built with [Zensical](https://zensical.org/) and automatically deplo
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install zensical
+pip install -r requirements.txt
 zensical serve
 ```
 

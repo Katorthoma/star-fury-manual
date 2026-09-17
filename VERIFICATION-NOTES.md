@@ -1,3 +1,12 @@
+## 2026-09-17
+
+Confirmed:
+
+- Raid Intel uses a strict greater-than comparison: `Raid Intel > Target Intel`.
+- Equality fails the Intel check.
+- A Universal Station result showed 120,000 Raid Intel vs 120,000 Target Intel as Failed.
+- For known LOW-target Intel caps, use `maximum target Intel + 1` when planning to guarantee Intel success.
+
 # Verification pass — 2026-09-16
 
 This pass incorporated direct current-player confirmations and current raid exports.

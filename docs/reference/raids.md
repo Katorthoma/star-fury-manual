@@ -31,20 +31,24 @@ The overall empire raid limit is **3 raids per day**, with a **6-hour cooldown b
 
 ## LOW-target Intel caps
 
-When a raid target is still in its **LOW range**, its target Intel/Probe value will not exceed the following cap:
+When a raid target is still in its **LOW range**, its target Intel/Probe value will not exceed the following cap.
 
-| Raid | Maximum LOW-target Intel |
-|---|---:|
-| Trade Fleet | 300 |
-| Trade Convoy | 3,000 |
-| Pirate Outpost | 15,000 |
-| Sector Station | 24,000 |
-| Galaxy Station | 42,000 |
-| Pirate Stronghold | 60,000 |
-| Universal Station | 120,000 |
+The Intel check requires **Raid Intel to be strictly greater than Target Intel**. Equality fails, so use the cap plus 1 when you want to guarantee clearing a LOW target at its known maximum.
+
+| Raid | Maximum LOW-target Intel | Raid Intel to clear maximum |
+|---|---:|---:|
+| Trade Fleet | 300 | **301** |
+| Trade Convoy | 3,000 | **3,001** |
+| Pirate Outpost | 15,000 | **15,001** |
+| Sector Station | 24,000 | **24,001** |
+| Galaxy Station | 42,000 | **42,001** |
+| Pirate Stronghold | 60,000 | **60,001** |
+| Universal Station | 120,000 | **120,001** |
+
+The right-hand column is calculated as `maximum target Intel + 1`.
 
 !!! question "HIGH-range Intel"
-    HIGH-target Intel behavior is not yet confirmed. HIGH targets may use a different scaling model, or they may continue to use fixed values. Until that is verified, use the Intel value shown by the raid interface.
+    HIGH-target Intel behavior is not yet confirmed. HIGH targets may use a different scaling model, or they may continue to use fixed values. Until that is verified, use the Intel value shown by the raid interface and make sure displayed Raid Intel is higher, not merely equal.
 
 ## Mercenary payout tiers
 

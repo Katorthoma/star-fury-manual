@@ -155,6 +155,19 @@ Attack and Defence are the required combat checks.
 
 A raid can still succeed when the Intel check fails.
 
+### Intel must exceed the target
+
+The Intel comparison is **strict**:
+
+`Raid Intel > Target Intel`
+
+Matching the target exactly is not enough. In the observed Universal Station result below, **120,000 Raid Intel vs 120,000 Target Intel failed** even though the raid itself succeeded on Attack and Defence.
+
+<figure class="sf-figure sf-figure-medium" markdown="1">
+  ![Universal Station raid result showing Raid Intel 120,000 versus Target Intel 120,000 marked Failed while the overall raid succeeds](../assets/images/raid-intel-equality-fail.png)
+  <figcaption>Equality fails the Intel check. Your displayed Raid Intel must be at least 1 point higher than the target.</figcaption>
+</figure>
+
 ### Successful Intel effect
 
 A successful Intel check reduces both:
@@ -170,7 +183,13 @@ This happens before the combat thresholds are resolved.
 
 LOW-range raid targets have known maximum Intel/Probe values. The exact cap depends on raid type.
 
-See [Raid reference](../reference/raids.md#low-target-intel-caps) for the Horizon LIII cap table.
+Because equality fails, the safe planning value for a known LOW-target cap is:
+
+`maximum target Intel + 1`
+
+For example, a LOW Universal Station can reach **120,000 Target Intel**, so use at least **120,001 displayed Raid Intel** if you want to guarantee clearing the Intel check against the known maximum.
+
+See [Raid reference](../reference/raids.md#low-target-intel-caps) for the Horizon LIII cap table and cap-plus-one planning values.
 
 !!! question "HIGH-range Intel"
     The Intel model for HIGH-range targets is not yet confirmed. Use the target Intel value shown by the raid interface rather than extrapolating from the LOW-range caps.

@@ -1,0 +1,93 @@
+name: Mechanic correction or evidence
+description: Report an incorrect mechanic, document a changed mechanic, or submit new evidence.
+title: "[Mechanic] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the Star Fury V5 Player Manual.
+
+        Please include enough evidence to distinguish a confirmed mechanic from an inference.
+        Screenshots and repeatable tests are especially useful.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of report
+      options:
+        - Correction to an existing mechanic
+        - New mechanic or behavior
+        - Round-specific change
+        - Additional evidence for an existing mechanic
+        - Documentation clarification
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Manual page
+      description: Which page is affected, if known?
+      placeholder: "Example: Raids / Raid reference"
+    validations:
+      required: false
+
+  - type: textarea
+    id: claim
+    attributes:
+      label: What should be corrected or documented?
+      description: Describe the mechanic as precisely as possible.
+      placeholder: |
+        Example:
+        Raid Intel must be greater than Target Intel.
+        Matching Target Intel exactly results in a failed Intel check.
+    validations:
+      required: true
+
+  - type: input
+    id: round
+    attributes:
+      label: Round
+      description: Which Star Fury round did you observe this in?
+      placeholder: "Example: Horizon LIII"
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include screenshots, game output, developer statements, or other direct evidence.
+      placeholder: |
+        Drag screenshots here or describe the relevant game result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction or test conditions
+      description: If reproducible, explain how another player could verify it.
+      placeholder: |
+        1. Create a Universal Station raid.
+        2. Set Raid Intel equal to Target Intel.
+        3. Complete the raid.
+        4. Observe the Intel result.
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Anything else that may affect interpretation, such as race, research, alliance modifiers, ship configuration, or HIGH/LOW target range.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Evidence quality
+      options:
+        - label: I have separated what I directly observed from what I am inferring.
+          required: true
